@@ -1,0 +1,4 @@
+baseURL = 'https://0xrohadi.pages.dev/'
+languageCode = 'en-us'
+title = '0xrohadi'
+theme = 'nostyleplease'
