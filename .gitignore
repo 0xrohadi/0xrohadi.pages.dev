@@ -1,2 +1,17 @@
-/public/
-/resources/
+# File build lock Hugo  
+.hugo_build.lock  
+
+# Direktori output build  
+/public/  
+/resources/_gen/  
+
+# File cache Hugo  
+.hugo/  
+
+# Environment (misal jika menggunakan variabel lingkungan)  
+.env  
+
+# Sistem & editor  
+.DS_Store  
+.idea/  
+*.swp  
