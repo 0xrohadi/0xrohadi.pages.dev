@@ -3,7 +3,7 @@ date = '2025-09-15T14:10:41Z'
 draft = false
 title = 'How I Found a Critical IDOR That Allowed Deleting All Billing Transactions'
 +++
-Halo semuanya! Kali ini saya ingin berbagi pengalaman menarik saat melakukan security testing pada beberapa aplikasi web yang berfokus pada free payroll, absenteeism dan employee management.
+Halo semuanya! Kali ini saya ingin berbagi pengalaman menarik saat melakukan security testing pada suatu aplikasi web yang berfokus pada free payroll, absenteeism dan employee management.
 
 Bayangkan ini, saya sedang mengeksplorasi sebuah aplikasi web tersebut untuk sekedar pengujian keamanan dan tiba-tiba menemukan sesuatu yang cukup mengejutkan. Sebuah kerentanan Insecure Direct Object Reference (IDOR) yang memungkinkan saya menghapus transaksi billing pengguna lain, tanpa ada otorisasi sama sekali.
 
@@ -40,8 +40,8 @@ Lanjut ke uji coba klasik: **menghapus transaksi milik pengguna lain**.
 ## Cross The Line: Exploit IDOR
 
 Jadi, saya menyiapkan dua akun:
-1. `Attacker:` akun saya
-2. `Victim:` akun percobaan pengguna lain
+1. Attacker: akun saya
+2. Victim: akun percobaan pengguna lain
 
 *Note: Sebagai seorang bug hunter yang menjunjung etika dan mematuhi kebijakan program, penyerang hanya diperbolehkan menguji pada akun miliknya sendiri dan tidak boleh menerapkan uji coba ini pada target nyata. Ingat, ada konsekuensi hukum jika melanggar aturan, jadi selalu berhati-hati!*
 
@@ -126,6 +126,6 @@ Saya sudah melaporkan kerentanan ini dan perusahaan menanggapinya dengan cepat. 
 
 Momen seperti ini selalu bikin saya sadar. Dunia bug bounty selalu penuh kejutan, dan kadang bug paling kritis justru tersembunyi di *"hal-hal kecil yang tidak terlihat"*.
 
-Terima kasih sudah membaca! Kalau ada pertanyaan, follow saya di ![X (Twitter)](https://x.com/@0xrohadi) ya.
+Terima kasih sudah membaca! Kalau ada pertanyaan, follow saya di [X (Twitter)](https://x.com/@0xrohadi "0xrohadi") ya.
 
 Have a nice day, enjoy!
