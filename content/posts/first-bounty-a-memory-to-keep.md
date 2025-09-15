@@ -1,6 +1,6 @@
 +++
 date = '2025-07-19T16:07:33+07:00'
-draft = false
+draft = true
 title = 'First Bounty a Memory to Keep'
 +++
 September 15th, 2020 was a day I’ll never forget.  
