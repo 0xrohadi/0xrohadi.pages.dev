@@ -12,9 +12,9 @@ Yup, benar-benar semua transaksi.
 ## Apa itu IDOR? Singkatnya?
 IDOR (Insecure Direct Object Reference) adalah salah satu jenis kerentanan kelemahan kontrol akses di mana aplikasi mempercayai data yang dikirim pengguna, misalnya ID transaksi atau user ID, tanpa memastikan apakah pengguna tersebut memang berhak atas data itu.
 
-Akibatnya, jika seseorang bisa menebak atau memodifikasi nilai ID di request, ia bisa mengakses, mengubah bahkan menghapus data milik pengguna lain. Celah seperti ini sering muncul di API modern ketika validasi otorisasi hanya dilakukan di sisi UI, tapi tidak di sisi server.
+Akibatnya, jika seseorang bisa menebak atau memodifikasi nilai ID di request, ia bisa mengakses, mengubah, bahkan menghapus data milik pengguna lain. Celah seperti ini sering muncul di API modern ketika validasi otorisasi hanya dilakukan di sisi client, tapi tidak di sisi server.
 
-Dalam kasus temuan saya ini, jika kamu tahu ID riwayat transaksi pembayaran billing seseorang, kamu bisa menghapusnya. Tanpa izin, tanpa ada batasn.
+Dalam kasus temuan saya ini, jika kamu tahu ID riwayat transaksi pembayaran billing seseorang, kamu bisa menghapusnya. Tanpa izin, tanpa ada batasan.
 
 ## Menemukan "Pintu Rahasia" Endpoint Tersembunyi
 Seperti biasa, saya login ke akun saya, buka **Pengaturan > Billing**. Saya melihat daftar riwayat transaksi, opsi membuat perpanjangan paket baru, tapi tidak ada tombol hapus.
@@ -23,17 +23,17 @@ Seperti biasa, saya login ke akun saya, buka **Pengaturan > Billing**. Saya meli
 
 Tapi, sebagai seorang bug hunter selalu penasaran. Jadi saya lanjut eksplorasi, **Pengaturan > Integrasi > Open API**. Di sana saya menemukan URL dokumentasi API. Awalnya, tidak ada yang menarik sama sekali. Tapi saya tidak menyerah.
 
-![url dokumen api](/images/url_dokumen_api.png)
-
 Saat sesi eksplorasi, saya sempat mengambil screenshot halaman aplikasi yang menunjukkan tautan dokumentasi internal dengan path yang tampak seperti:
 
-![https://private.com/documentation/hr][none]
+![URL Dokumen API](/images/url_dokumen_api.png)
 
-Itu memberi petunjuk bahwa ada dokumentasi internal dan sebagai bug hunter, petunjuk sekecil apa pun bisa berarti pintu masuk. Saya lalu menebak varian URL yang umum dipakai untuk Open API / Swagger, dan setelah beberapa percobaan menemukan versi dokumentasi yang lengkap dan lebih “developer-centric”:
+Doc asli API: *![**https://private.com/documentation/hr**](none)*
 
-![**https://private.com/docs/hr**](none)
+Itu memberi petunjuk bahwa ada dokumentasi internal dan sebagai bug hunter, petunjuk sekecil apa pun bisa berarti pintu masuk. Saya lalu menebak varian URL yang umum dipakai untuk Open API / Swagger, dan setelah beberapa percobaan menemukan versi dokumentasi yang lengkap dan lebih “developer-centric” (anjay):
 
-Di halaman /docs/hr itulah banyak endpoint API yang tidak terekspos di UI terlihat jelas termasuk endpoint yang langsung membuat saya was-was:
+*![**https://private.com/docs/hr**](none)*
+
+Di halaman **/docs/hr** itulah banyak endpoint API yang tidak terekspos di UI terlihat jelas termasuk endpoint yang langsung membuat saya was-was:
 
 **`DELETE /app/billingTransactions/{id}`**
 
