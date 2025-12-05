@@ -158,4 +158,4 @@ Momen seperti ini selalu bikin saya sadar. Dunia bug bounty selalu penuh kejutan
 
 Terima kasih sudah meluangkan waktunya untuk membaca. Kalau ada yang mau didiskusikan atau hanya sekedar bertanya, follow saya di [X (Twitter)](https://x.com/@0xrohadi "0xrohadi") ya.
 
-Have a nice day!
+Have a good day!
