@@ -66,7 +66,7 @@ Saya membuka profil Akun B dan mengekstrak ID Pengguna serta ID Postingan mereka
 * Mengamati request yang terkirim di Burp Suite
 
 ```
-POST /api/v1.3/posts/b1b7f1063da2f0118e646045bd354e91/reactions HTTP/1.1
+POST /api/v1.3/posts/50ef6acd8171401cad898bdca23efe67_b1b7f1063da2f0118e646045bd354e91/reactions/users/02400792 -9156-47ea-bee7-15376143df16 HTTP/1.1
 Host: www.private.com
 ...
 ```
