@@ -1,6 +1,6 @@
 +++
 date = '2025-12-11T12:44:10Z'
-draft = true
+draft = false
 title = 'How I Hijacked Any Users Pinned Post With A Single IDOR'
 +++
 Halo semuanya! Saya baru-baru ini menguji sebuah platform musik populer yang berada di bawah program bug bounty private. Dalam pengujian ini, saya menemukan kerentanan IDOR (Insecure Direct Object Reference) kritis yang memungkinkan penyerang untuk memanipulasi postingan yang disematkan (pinned post) di profil pengguna mana pun tanpa izin.
