@@ -23,7 +23,7 @@ Host: www.private.com
 Authorization: Bearer <ATTACKER_TOKEN>
 Content-Type: application/json
 
-{"entityType":"users","entityId":"02400792-9156-47ea-bee7-15376143df16","id":"b8450f98-43a4-f011-8e64-6045bd354e91"}>
+{"entityType":"users","entityId":"02400792-9156-47ea-bee7-15376143df16","id":"b8450f98-43a4-f011-8e64-6045bd354e91"}
 ```
 ### Response:
 
