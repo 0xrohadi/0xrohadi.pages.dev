@@ -29,7 +29,7 @@ Saat sesi eksplorasi, saya sempat mengambil screenshot halaman aplikasi yang men
 
 Doc asli API: *![**https://private.com/documentation/hr**](none)*
 
-Itu memberi petunjuk bahwa ada dokumentasi internal dan sebagai bug hunter, petunjuk sekecil apa pun bisa berarti pintu masuk. Saya lalu menebak varian URL yang umum dipakai untuk Open API / Swagger, dan setelah beberapa percobaan menemukan versi dokumentasi yang lengkap dan lebih “developer-centric” (anjay):
+Itu memberi petunjuk bahwa ada dokumentasi internal dan sebagai bug hunter, petunjuk sekecil apa pun bisa berarti pintu masuk. Saya lalu menebak varian URL yang umum dipakai untuk Open API / Swagger, dan setelah beberapa percobaan menemukan versi dokumentasi yang lengkap dan lebih “developer-centric”:
 
 *![**https://private.com/docs/hr**](none)*
 

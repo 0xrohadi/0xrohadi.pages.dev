@@ -79,6 +79,8 @@ Dari request ini, saya mendapatkan:
 
 Saya mengambil request asli dari Akun A (Penyerang) dan mengganti ID-ID tersebut dengan ID milik Akun B (Korban):
 
+![pin post](/images/PIN-post.png)
+
 ```
 POST /api/v1.3/users/50ef6acd8171401cad898bdca23efe67/pins/posts/b1b7f1063da2f0118e646045bd354e91 HTTP/1.1
 Host: www.private.com
@@ -118,6 +120,7 @@ Authorization: Bearer <ATTACKER_TOKEN>>
 ```
 HTTP/1.1 204 No Content
 ```
+![unpin posts](/images/UNPIN-post.png)
 
 Request ini berhasil menghapus postingan dari slot yang disematkan di profil korban.
 
