@@ -134,7 +134,6 @@ Kerentanan IDOR yang ditemukan pada endpoint pins/posts ini memiliki dampak yang
 ### 1. Manipulasi Konten dan Narasi (Content Manipulation)
 
 **Skenario Nyata:** Bayangkan seorang musisi indie yang menyematkan link pre-order album terbarunya di bagian atas profil. Penyerang dapat:
-Disrupsi Komunikasi Krusial (Communication Disruption)disematkan
 
 * Mengganti pin tersebut dengan demo lama yang berkualitas buruk
 * Menyematkan postingan kontroversial yang sudah lama untuk merusak reputasi
@@ -208,7 +207,7 @@ Maksimal 10 operasi semat/lepas semat per pengguna per jam
 
 Apa yang awalnya hanya iseng menguji fitur "Pin to Top" ternyata berujung pada penemuan kerentanan kritis yang dapat memengaruhi seluruh pengguna platform. Ini membuktikan bahwa **kerentanan serius sering kali bersembunyi di fitur-fitur yang tampaknya paling sederhana.**
 
-Saya sangat menghargai respons cepat dari tim keamanan private program yang segera memvalidasi dan memperbaiki kerentanan ini dalam waktu kurang dari 1 minggu. Proses penanganan bug yang efisien seperti ini menunjukkan komitmen mereka terhadap keamanan pengguna.
+Saya sangat menghargai respons cepat dari tim keamanan (private program) yang segera memvalidasi dan memperbaiki kerentanan ini dalam waktu kurang dari 1 minggu. Proses penanganan bug yang efisien seperti ini menunjukkan komitmen mereka terhadap keamanan pengguna.
 
 ### Final Thoughts
 
