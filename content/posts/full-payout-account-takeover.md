@@ -106,7 +106,7 @@ Dengan URL ini, penyerang dapat:
 
 Kerentanan IDOR pada endpoint pembayaran ini memiliki dampak Critical terhadap integritas finansial platform dan penggunanya:
 
-### 1. Durect Financial Lost
+### 1. Direct Financial Lost
 * Penyerang dapat mengalihkan semua pembayaran masa depan korban
 * Tidak ada batasan jumlah korban yang dapat ditarget
 * Potensi kerugian finansial berskala besar untuk platform dan pengguna
