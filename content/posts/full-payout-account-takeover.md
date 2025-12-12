@@ -16,7 +16,7 @@ Endpoint yang bertanggung jawab untuk mengambil URL dashboard Tipalti adalah:
 ```
 GET /api/v1.3/payments/users/{user_id}/payout-methods/tipalti/url?...
 Host: www.private.com
-Authorization: Bearer eyJhbG... (token milik attacker)
+Authorization: Bearer eyJhbG...
 Content-Type: application/json
 ...
 ```
@@ -196,7 +196,7 @@ Sebagai bug bounty hunter, tanggung jawab kita bukan hanya menemukan kerentanan,
 ### Final Thoughts
 
 Bug ini mengajarkan beberapa hal penting:
-* **Trust is expensive**: Parameter `{user_id}` yang terlihat innocent ternyata menjadi pintu masuk ke rekening bank pengguna lain
+* **Trust is expensive**: Parameter {user_id} yang terlihat innocent ternyata menjadi pintu masuk ke rekening bank pengguna lain
 * **Financial APIs need extra scrutiny**: Satu endpoint yang exposed dapat membahayakan ribuan pengguna dan reputasi platform
 * **Fast response matters**: Dari report hingga fix dalam 3 hari menyelamatkan platform dari potensi kerugian yang jauh lebih besar
 
@@ -206,6 +206,6 @@ Bug ini mengajarkan beberapa hal penting:
 
 **Disclosure:** Write-up ini dipublikasikan setelah mendapat izin dari program dan setelah vulnerability telah sepenuhnya diperbaiki. Beberapa detail teknis dan identifiable information telah di-redact untuk melindungi privasi program.
 
-Terima kasih telah meluangkan waktu untuk membaca artikel ini. Jika ada pertanyaan atau diskusi lebih lanjut mengenai metodologi testing, silakan hubungi saya melalui [X].
+Terima kasih telah meluangkan waktu untuk membaca artikel ini. Jika ada pertanyaan atau diskusi lebih lanjut mengenai metodologi testing, silakan hubungi saya melalui [X](https://x.com/0xrohadi).
 
 Have a good day!
