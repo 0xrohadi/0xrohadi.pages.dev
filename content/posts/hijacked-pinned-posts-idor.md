@@ -87,7 +87,7 @@ Host: www.private.com
 Authorization: Bearer <ATTACKER_TOKEN>
 Content-Type: application/json
 
-{"entityType":"users","entityId":"50ef6acd8171401cad898bdca23efe67","id":"b1b7f1063da2f0118e646045bd354e91"}>
+{"entityType":"users","entityId":"50ef6acd8171401cad898bdca23efe67","id":"b1b7f1063da2f0118e646045bd354e91"}
 ```
 **3. Sending the Request**
 
@@ -202,9 +202,7 @@ Catat semua operasi pin/unpin untuk forensic analysis
 
 4. Implement Rate Limiting
 
-Untuk mencegah automated mass exploitation:
-
-Maksimal 10 operasi semat/lepas semat per pengguna per jam
+Untuk mencegah automated mass exploitation, Maksimal 10 operasi semat/lepas semat per pengguna per jam.
 
 ## Conclusion
 
@@ -229,3 +227,4 @@ Kerentanan ini telah dilaporkan melalui program bug bounty resmi dan telah diper
 Akhir kata, terima kasih sudah meluangkan waktu untuk membaca. Jika artikel ini bermanfaat, jangan ragu untuk di share. Sampai jumpa di writeups berikutnya!
 
 Have a good day!
+
