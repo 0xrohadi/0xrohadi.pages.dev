@@ -1,7 +1,11 @@
 +++
 date = '2026-10-02T08:56:43+07:00'
-draft = true
+draft = false
 title = 'About'
+
+[build]
+list = 'never'
+render = 'always'
 +++
 Hi there! I'm Rohadi, a security researcher and full-time bug hunter.
 
